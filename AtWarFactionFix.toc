@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: AtWarFactionFix
+## Notes: Prevents certain factions (Hodir) from ever going to war
+## Author: Brues
+AtWarFactionFix.lua
