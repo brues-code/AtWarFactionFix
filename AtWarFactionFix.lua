@@ -1,8 +1,14 @@
 local addonName = ...
 local f = CreateFrame("FRAME")
 
-local PROTECTED_FACTIONS = { 
-    1119 -- Sons of Hodir
+local GetFactionInfoByID, GetNumFactions, GetFactionInfo, FactionToggleAtWar =
+    GetFactionInfoByID, GetNumFactions, GetFactionInfo, FactionToggleAtWar
+
+local PROTECTED_FACTIONS = {
+    529,  -- Argent Dawn
+    589,  -- Wintersaber Trainers
+    1119, -- Sons of Hodir
+    576, -- Timbermaw Hold
 }
 
 function f:OnEvent(event, arg1)
@@ -17,6 +23,7 @@ function f:OnLoad()
 	self:RegisterEvent("UNIT_FACTION")
     self:SetProtectedFactionNames()
 	self:UNIT_FACTION("player")
+    self:UnregisterEvent("ADDON_LOADED")
 end
 
 function f:SetProtectedFactionNames()
