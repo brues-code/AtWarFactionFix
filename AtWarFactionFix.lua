@@ -9,6 +9,7 @@ local PROTECTED_FACTIONS = {
     589,  -- Wintersaber Trainers
     1119, -- Sons of Hodir
     576, -- Timbermaw Hold
+    1015, -- Netherwing
 }
 
 function f:OnEvent(event, arg1)
